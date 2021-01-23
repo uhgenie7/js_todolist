@@ -26,7 +26,7 @@ function askForName() {
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `hello ${text}`
+    greeting.innerText = `어서오세요, ${text}님. 남은 할 일은 아래와 같습니다.`
 }
 
 function loadName() {
