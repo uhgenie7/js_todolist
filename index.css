@@ -1,6 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #34495e;
-  color: white;
+  color: #333;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  margin: 10px;
+  padding: 0;
 }
 
 .wrap {
@@ -13,12 +31,10 @@ body {
 }
 
 .box {
-  width: 50%;
+  width: 30%;
   height: 80vh;
-  background: #111;
-  border: 1px solid;
+  border: 1px solid none;
   border-radius: 30px;
-  opacity: 50%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -26,10 +42,31 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 19px 38px rgba(66, 66, 65, 1), 0 15px 12px rgba(66, 66, 65, 1);
+  overflow: hidden;
 }
 
-.btn {
+.overlay {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(253, 249, 243);
+  opacity: 80%;
+  border: 1px solid none;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+button {
   cursor: pointer;
+  background: rgba(247, 220, 177, 0.8);
+  border: 1px solid;
+  /* border-radius: 50%; */
+  margin-left: 10px;
 }
 
 .clicked {
@@ -43,6 +80,19 @@ body {
 
 .showing {
   display: block;
+}
+
+h4 {
+  text-align: center;
+}
+
+input {
+  padding: 15px;
+  color: black;
+}
+
+input:focus {
+  background: rgb(248, 243, 235);
 }
 
 .bgImage {
@@ -62,4 +112,85 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.js-weather {
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  text-transform: capitalize;
+}
+
+.js-toDoList {
+  width: 100%;
+  background: rgba(250, 248, 244, 0.5);
+}
+
+.js-toDoList > ul {
+  display: flex;
+}
+
+.js-toDoList > li {
+  padding: 10px 50px;
+  border-bottom: 1px solid #333;
+}
+
+/* clock face */
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: 4;
+}
+
+.hand {
+  width: 50%;
+  height: 3px;
+  background: #222;
+  position: absolute;
+  top: 50%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+}
+.hour-hand {
+  background: black;
+  height: 3px;
+  z-index: 3;
+}
+
+.min-hand {
+  height: 2px;
+  background: rgb(24, 24, 24);
+  z-index: 2;
+}
+
+.sec-hand {
+  height: 1px;
+  background: rgb(92, 92, 92);
+  z-index: 1;
+}
+
+.clock {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  padding: 1rem;
+  box-shadow: 0 0 0px 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black;
 }
