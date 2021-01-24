@@ -10,27 +10,41 @@
     <div class="wrap">
         <div class="box">
             <span class="js-weather"></span>
-            <div class="js-clock">
-                <div class="clock">
-                    <div class="clock-face">
-                      <div class="circle"></div>
-                      <div class="hand hour-hand"></div>
-                      <div class="hand min-hand"></div>
-                      <div class="hand sec-hand"></div>
+            <div class="clockBox">
+                <div class="js-clock">
+                    <div class="clock">
+                        <div class="clock-face">
+                        <div class="circle"></div>
+                        <div class="hand hour-hand"></div>
+                        <div class="hand min-hand"></div>
+                        <div class="hand sec-hand"></div>
+                        </div>
                     </div>
-                  </div>
-                <h1 class="js-title">00:00</h1>
+                    <h1 class="js-title">00:00</h1>
+                </div>
             </div>
             <form class="js-form form">
-                <input type="text" placeholder="이름을 적어주세요."></form>
+                <input type="text" placeholder="이름을 적어주세요.">
+            </form>
                 <h4 class="js-greetings greetings"></h4>
-                <form class="js-toDoForm">
+                <form class="js-toDoForm" id="js-form">
                     <input type="text" placeholder="할 일">
                 </form>
-                <ul class="js-toDoList">
-                </ul>
-                <span class="overlay"></span>
-        </div>
+                <div class="todoBox">
+                    <div class="pendingBox">
+                        <h3>해야 할 일</h3>
+                        <ul class="js-pending" id="js-pending">
+                        </ul>
+                    </div>
+                    <div class="finishBox">
+                        <h3>끝난 일</h3>
+                        <ul class="js-finished" id="js-finished">
+                        </ul>
+                    </div>
+                </div>
+                    <span class="overlay"></span>
+            </div>
+        <!-- box end -->
     </div>
     <!-- js list -->
     <script src="clock.js"></script>
