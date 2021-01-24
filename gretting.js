@@ -1,5 +1,5 @@
-const form = document.querySelector(".js-form"),
-    input = form.querySelector("input"),
+const inputForm = document.querySelector(".js-form"),
+    inputgretting = inputForm.querySelector("input"),
     greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser",
@@ -11,7 +11,7 @@ function saveName(text) {
     
 function handleSubmit(event) {
     event.preventDefault();
-    const currentValue = input.value;
+    const currentValue = inputgretting.value;
     paintGreeting(currentValue);
     saveName(currentValue);
 }
@@ -19,12 +19,12 @@ function handleSubmit(event) {
 
 
 function askForName() {
-    form.classList.add(SHOWING_CN);
-    form.addEventListener("submit", handleSubmit)
+    inputForm.classList.add(SHOWING_CN);
+    inputForm.addEventListener("submit", handleSubmit)
 }    
 
 function paintGreeting(text) {
-    form.classList.remove(SHOWING_CN);
+    inputForm.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     greeting.innerText = `어서오세요, ${text}님.
     남은 할 일은 아래와 같습니다.`
