@@ -6,4 +6,8 @@ Localstorage를 사용한 간단한 vanila javascript project.
 3. 할일 기능. input 창에 할일을 적으면 아래에 할일 리스트가 나오며 x를 누르면 사라진다. 새로고침해도 남아있다.
 4. 랜덤 배경 기능. 새로고침을 하면 랜덤으로 배경화면이 바뀐다. Math random 메소드를 활용했다.
 
+## 추후 추가하고 싶은 기능
+1. 버튼 아이콘 바꾸기
+2. AM, PM 기능으로 시간 표시하기
+3. DDAY 기능 넣기
 사이트: https://uhj1993.github.io/js_chromeApp/
