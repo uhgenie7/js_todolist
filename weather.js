@@ -3,16 +3,19 @@ const COORDS = 'coords';
 const API_KEY = "d943f9271509662f7f579fd2c785114c";
 
 function getWeather(lat, lng) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric&lang={kr}`)
         .then(function (response) {
+            console.log(response)
         return response.json();
         })
         .then(function (json) {
             console.log(json)
             const temperature = json.main.temp;
             const place = json.name;
+            const weatherIcon = json.weather[0].icon;
             const weathers = json.weather[0].description;
-            weather.innerText = `${temperature}˚C @ ${place} @ ${weathers}`
+            // image.src = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+            weather.innerHTML = `${temperature}˚C @ ${place} ${weathers} <img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png">`
     });
 }
 
