@@ -11,7 +11,7 @@ Js_chromeApp은 위치 API를 이용해 날씨와 위치 정보를 표시해주�
 
 ## 사이트
 ---
-https://uhj1993.github.io/js_chromeApp/
+https://uhj1993.github.io/js_todolist/
 
 ## 주요 특징
 ---
