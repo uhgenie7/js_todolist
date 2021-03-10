@@ -1,4 +1,4 @@
-#  Js_chromeApp
+#  Js_todolist
 ---
 #### _Localstorage를 사용한 간단한 vanila javascript project._
 ![todo1](https://user-images.githubusercontent.com/72803184/109382630-f9b36800-7924-11eb-84e1-4ccabfb6b4c5.gif)
